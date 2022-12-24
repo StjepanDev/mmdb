@@ -1,0 +1,30 @@
+.container{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    height: 10vh;
+    background-color: rgb(62, 73, 136);
+     
+}
+
+.align-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.branding{
+    font-size: 20px;
+    color: azure;
+    padding-left: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.searchbar{
+    width:80%;
+    height:4vh;
+    border-radius: 3px;
+    border:none;
+    padding-left: 15px;
+    outline-style: none;
+}
