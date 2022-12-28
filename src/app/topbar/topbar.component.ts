@@ -16,9 +16,8 @@ export class TopbarComponent {
 
   handleKeyUp(){
     // console.log("key was pressed");
-    this.movieService.searchMovies(this.searchText).then(res=>{
-
-
+    this.movieService.searchMovies(this.searchText).then((res:any)=>{
+      this.movieService.movies = res.results
       console.log(res);
     }).catch(err => {  
       console.log(err);

@@ -8,12 +8,14 @@ import { HomeComponent } from './home/home.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopbarComponent,
-    HomeComponent
+    HomeComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,
