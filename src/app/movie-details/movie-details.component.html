@@ -1,17 +1,22 @@
-<div class="container">
-    <div><img class="poster" alt=""></div>
+<div class="container" *ngIf="movie !== undefined">
+    <div><img class="poster" [src]="'https://www.themoviedb.org/t/p/w1280' + movie.poster_path" alt="movie poster"></div>
     <div class="details">
         <div class="title">
-            Ime
+            {{movie.original_title}}
         </div>
         <div class="details-spec">
-            <span>released</span>
-            <span class="center-span">130</span>
-            <span class="rating-span">7,8</span>
+            <span>{{movie.status}}</span>
+            <span class="center-span">{{movie.runtime}}</span>
+            <span class="rating-span">{{movie.vote_average}}</span>
         </div>
         <div class="description">
-                     ddddddddddddfdggsdfgdfd                 dfgdfg dddddddddddddd g
+            {{movie.overview}}
         </div>
-
+        <div class="other-details">
+            <h3>Other Details : </h3> 
+            <p>Language : </p> <span>{{movie.original_language}}</span>
+            <p>Budget : </p> <span>{{movie.budget}} $</span>
+            <p>Revenue : </p> <span>{{movie.revenue}} $</span>
+        </div>
     </div>
 </div>

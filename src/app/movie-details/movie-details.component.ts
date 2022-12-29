@@ -18,9 +18,13 @@ export class MovieDetailsComponent  implements OnInit {
       let movieId = parseInt(id);
       this.movieService.getMovieDetails(movieId).then((res:any)=>{
         console.log(res);
+        this.movie = res;
       }).catch((err)=>{
         console.log(err);
       })
     }  
   }
+
+  movie:any;
+
 }

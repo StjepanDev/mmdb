@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../movie.service';
 
 @Component({
@@ -6,24 +6,24 @@ import { MovieService } from '../movie.service';
   templateUrl: './topbar.component.html',
   styleUrls: ['./topbar.component.css']
 })
-export class TopbarComponent {
+export class TopbarComponent implements OnInit {
 
-  constructor(public movieService:MovieService) {}
+  constructor(public movieService:MovieService) { }
 
-  searchText= ""
+  ngOnInit(): void {
+  }
+
+  searchText = "";
 
   isPaused = false;
 
   handleKeyUp(){
-    // console.log("key was pressed");
     this.movieService.searchMovies(this.searchText).then((res:any)=>{
-      this.movieService.movies = res.results
       console.log(res);
-    }).catch(err => {  
-      console.log(err);
-      
+      this.movieService.movies = res.results;
+    }).catch(err=>{
+      console.error(err);
     })
   }
-
 
 }

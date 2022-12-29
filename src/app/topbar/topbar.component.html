@@ -3,7 +3,7 @@
         MMDB
     </div>
     <div class="search-container align-content">
-        <input (keyup)="handleKeyUp()" [(ngModel)]="searchText" type="text" class="searchbar" placeholder="Search for movies" >
+        <input (keyup.enter)="handleKeyUp()" [(ngModel)]="searchText" type="text" class="searchbar" placeholder="Search for movies" >
 
     </div>
     <div>{{searchText}}</div>

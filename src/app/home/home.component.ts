@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MovieService } from '../movie.service';
 
 @Component({
@@ -8,7 +9,9 @@ import { MovieService } from '../movie.service';
 })
 export class HomeComponent {
 
-  constructor(public movieService:MovieService) {}
+  constructor(public movieService:MovieService,private router:Router) {
+    
+  }
 
   ngOnInit(): void {
     this.movieService.getMovies().then((res:any)=>{
@@ -18,4 +21,9 @@ export class HomeComponent {
       console.log(err);
     })
   }
+
+  viewMovie(movieId:number){
+    this.router.navigate(['/movie',movieId ])
+  }
+
 }
