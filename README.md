@@ -1,3 +1,6 @@
+get your api key here https://www.themoviedb.org/ and insert it in movie.service.ts
+
+
 # Mmdb
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
